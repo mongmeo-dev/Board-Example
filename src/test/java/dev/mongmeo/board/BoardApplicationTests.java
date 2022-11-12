@@ -1,10 +1,10 @@
-package dev.mongmeo.javadatabase;
+package dev.mongmeo.board;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JavaDatabaseApplicationTests {
+class BoardApplicationTests {
 
   @Test
   void contextLoads() {

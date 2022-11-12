@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>게시글 생성</title>
+  <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">Board</a>
+</nav>
+<div class="container mt-5 mb-5">
+  <h1 th:text="${post.title}"></h1>
+  <div class="font-weight-lighter">
+    작성일자 : <span th:text="${post.createdAt}"></span> |
+    작성자 : <span th:text="${post.author}"></span>
+  </div>
+  <hr>
+  <p th:text="${post.content}"></p>
+  <a role="button" class="btn-primary btn" th:href="@{/posts/{postId}/update(postId=${post.id})}">수정하기</a>
+  <a role="button" class="btn-danger btn" th:href="@{/posts/{postId}/delete(postId=${post.id})}">삭제하기</a>
+</div>
+</body>
+</html>
