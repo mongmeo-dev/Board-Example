@@ -34,6 +34,7 @@ public class PostService {
   public PostResponseDto updatePost(PostUpdateDto dto) {
     PostEntity post = tryGetPostById(dto.getId());
     post.update(dto);
+    postRepository.save(post);
     return PostResponseDto.fromEntity(post);
   }
 

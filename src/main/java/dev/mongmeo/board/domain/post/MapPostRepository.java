@@ -7,9 +7,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
-import org.springframework.stereotype.Repository;
 
-@Repository
 public class MapPostRepository implements PostRepository {
 
   private final Map<Long, PostEntity> store = new ConcurrentHashMap<>();
