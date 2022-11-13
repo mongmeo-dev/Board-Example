@@ -8,5 +8,5 @@ import lombok.Setter;
 @Setter
 public class BaseTimeEntity {
 
-  private LocalDateTime CreatedAt = LocalDateTime.now();
+  private LocalDateTime createdAt;
 }
